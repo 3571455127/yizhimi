@@ -70,18 +70,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only"><?php echo L(Toggle_navigation);?></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img alt="logo" src="__PUBLIC__/www/images/logo.png"></a>
+                    <a class="navbar-brand" href="/index.php"><img alt="logo" src="__PUBLIC__/www/images/logo.png"></a>
                 </div>
 
                 <div id="navbar-example">
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-left">
-                            <li class="active"><a href="#home">Home</a></li>
+                            <li class="active"><a href="#home"><?php echo L(HOME_FONT);?></a></li>
                             <?php $n=0;foreach($Categorys as $key=>$r):if($n<100) :if( intval(0)==$r["parentid"] ) :++$n; if($r[ismenu]!=1): ?><li class="general">
                                 <a href="<?php echo ($r["wwwurl"]); ?>"><?php echo ($r["catname"]); ?>
                                     <?php if($r[child] == 1) : ?><i class="fa fa-angle-down" ria-hidden="true"></i><?php endif;?>
@@ -96,11 +96,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                         <div class="share navbar-left">
                             <ul class="clearfix">
-                                <li><a class="facebook" href="https://www.youtube.com/channel/UCkGJboJMqMkfCmDTUItJbNg"
+                                <li><a class="facebook" href="<?php echo ($facebook); ?>"
                                         target="_blank">
                                         <i class="fa fa-facebook" aria-hidden="true"></i>
                                     </a></li>
-                                <li><a class="youtube" href="https://www.linkedin.com/company/yizumi/?viewAsMember=true"
+                                <li><a class="youtube" href="<?php echo ($youtube); ?>"
                                         target="_blank">
                                         <i class="fa fa-youtube" aria-hidden="true"></i>
                                     </a></li>
@@ -108,8 +108,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <img src="__PUBLIC__/www/images/language.png" alt="">
                                     <div class="language-box">
                                         <a href="">English</a>
-                                        <a href="">Español</a>
-                                        <a href="">Русский</a>
+                                        <a href="">Deutsche</a>
+                                        <a href="">Italiano</a>
                                     </div>
                                 </li>
                             </ul>
@@ -128,7 +128,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="nav_right">
                     <div class="nav_rin">
                         <ul class="menu_ul">
-                            <li><a href="#home" title="">HOME</a></li>
+                            <li><a href="#home" title=""><?php echo L(HOME_FONT);?></a></li>
                             <?php $n=0;foreach($Categorys as $key=>$r):if($n<100) :if( intval(0)==$r["parentid"] ) :++$n; if($r[ismenu]!=1): ?><li class="active menu_li">
                                 <a href="<?php echo ($r["wwwurl"]); ?>" class="menu_a"><?php echo ($r["catname"]); ?></a>
                                 <?php if($r[child] == 1) : ?>
@@ -171,12 +171,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
         <div class="percentage">
-            <h3>Intelligent. Simple.2 </h3>
-            <p>Yizumi devoted to making the production and management of rubber parts intelligent and simple2</p>
+            <h3><?php echo L(Intelligent_Simple);?></h3>
+            <p><?php echo L(Yizumi_devoted_tom);?></p>
         </div>
-
+       
     </div>
+  
 </div>
+
 
 <div class="index">
 
@@ -187,7 +189,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="container">
                 <div class="row">
-                    <?php getcatvar('page','id = 110','cont');?>
+                    <?php getcatvar('page','id = 110','sjcont');?>
                 </div>
             </div>
         </div>
@@ -198,7 +200,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a id="technology"></a>
         <div class="technology">
             <div class="content clearfix">
-               <?php getcatvar('page','id = 111','cont');?>
+               <?php getcatvar('page','id = 111','sjcont');?>
             </div>
         </div>
     </div>
@@ -207,8 +209,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div>
         <a id="general"></a>
         <div class="product">
-            <h3> <span>YIZUMI</span> General model</h3>
-            <div class="title">SINCE 2002</div>
+            <h3> <span><?php echo L(YIZUMI);?></span><?php echo L(General_model);?></h3>
+            <div class="title"><?php echo L(SINCE_2002);?></div>
 
             <div class="content">
                 <?php $n=0;foreach($Categorys as $key=>$r):if($n<100) :if( intval(112)==$r["parentid"] ) :++$n; if($r[isfooter]!=1) : ?>
@@ -218,7 +220,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="pro clearfix">
                                     <a id="<?php echo ($r["catdir"]); ?>"></a>
                                     <h6><?php echo ($r["catname"]); ?></h6>
-                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
+                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
                                 </div>
                             </div>
                             </div>
@@ -231,7 +233,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="pro clearfix">
                                     <a id="<?php echo ($r["catdir"]); ?>"></a>
                                     <h6><?php echo ($r["catname"]); ?></h6>
-                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
+                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
                                 </div>
                             </div>
 
@@ -242,8 +244,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div style="padding-bottom: 40px;">
     <a id="special"></a>
-    <h3> <span>YIZUMI</span> Special Models </h3>
-    <div class="title">SINCE 2002</div>
+    <h3> <span><?php echo L(YIZUMI);?></span> <?php echo L(Special_Models);?> </h3>
+    <div class="title"><?php echo L(SINCE_2002);?></div>
 </div>
                 <?php $n=0;foreach($Categorys as $key=>$r):if($n<100) :if( intval(119)==$r["parentid"] ) :++$n; if($r[isfooter]!=1) : ?>
                 <div class="list  product-bg2">
@@ -253,7 +255,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="pro clearfix">
                                 <a id="<?php echo ($r["catdir"]); ?>"></a>
                                 <h6><?php echo ($r["catname"]); ?></h6>
-                                 <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
+                                 <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
                             </div>
 
                         </div>
@@ -267,7 +269,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="pro clearfix">
                                 <a id="<?php echo ($r["catdir"]); ?>"></a>
                                 <h6><?php echo ($r["catname"]); ?></h6>
-                                 <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
+                                 <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
                             </div>
                             </div>
                         </div>
@@ -283,7 +285,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="welcome">
         <div class="container">
             <div class="row">
-                <h2> Welcome to YIZUMI RUBBER MACHINERY CO., LTD.</h2>
+                <h2><?php echo L(Welcome_to_YIZUMI);?></h2>
             </div>
         </div>
     </div>
@@ -294,7 +296,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="service">
             <div class="container">
                 <div class="row">
-                    <?php getcatvar('page','id = 125','cont');?>
+                    <?php getcatvar('page','id = 125','sjcont');?>
 
                 </div>
             </div>
@@ -328,7 +330,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="row">
             <div class="content clearfix">
                 <div class="left col-lg-6 col-md-6 col-sm-6">
-                    <a href="" class="footer-logo"><img src="/Public/www/images/logo_foot.png" alt=""></a>
+                    <a href="/index.php" class="footer-logo"><img src="/Public/www/images/logo_foot.png" alt=""></a>
                     <div class="copy"><?php echo ($name); ?></div>
                     <ul>
                         <li>
@@ -339,7 +341,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li><a href="<?php echo ($wwwurl); ?>" target="_black"><?php echo ($wwwurl); ?></a></li>
                     </ul>
                     <div class="footer-share">
-                        <a class="facebook" href="<?php echo ($ins); ?>"
+                        <a class="facebook" href="<?php echo ($facebook); ?>"
                             target="_blank">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                         </a>
@@ -353,33 +355,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <form name="form" method="post" onsubmit="return beforeSubmit2(this);"
                         action="index.php?g=Home&amp;a=message">
                         <div class="box clearfix">
-                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">Name <span>*</span> </div>
+                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5"><?php echo L(Name);?> <span>*</span> </div>
                             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="name" id=""
-                                    placeholder="Your Name">
+                                    placeholder="<?php echo L(Your_Name);?>">
                             </div>
                         </div>
                         <div class="box clearfix">
-                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">Email <span>*</span> </div>
+                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5"><?php echo L(Email);?> <span>*</span> </div>
                             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="email" id=""
-                                    placeholder="Your Email">
+                                    placeholder="<?php echo L(Your_Email);?>">
                             </div>
                         </div>
                         <div class="box clearfix">
                             <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                Company name <span>*</span> </div>
+                                <?php echo L(Company_name);?> <span>*</span> </div>
                             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="com" id=""
-                                    placeholder="Your Company">
+                                    placeholder="<?php echo L(Your_Company);?>">
                             </div>
                         </div>
                         <div class="box clearfix">
                             <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                Message <span>*</span> </div>
-                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <textarea placeholder="Your Message"
+                                <?php echo L(Message);?> <span>*</span> </div>
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <textarea placeholder="<?php echo L(Your_Message);?>"
                                     name="message" id=""></textarea>
                             </div>
                         </div>
 
-                        <input type="submit" value="Submit Form" class="submit-btn">
+                        <input type="submit" value="<?php echo L(Submit_Form);?>" class="submit-btn">
                     </form>
                 </div>
             </div>
@@ -409,8 +411,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
         <div class="percentage">
-            <h3>Intelligent. Simple. </h3>
-            <p>Yizumi devoted to making the production and management of rubber parts intelligent and simple</p>
+            <h3><?php echo L(Intelligent_Simple);?></h3>
+            <p><?php echo L(Yizumi_devoted_tom);?></p>
         </div>
 
     </div>
@@ -445,8 +447,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div>
         <a id="general"></a>
         <div class="product">
-            <h3> <span>YIZUMI</span> General model</h3>
-            <div class="title">SINCE 2002</div>
+            <h3> <span><?php echo L(YIZUMI);?></span><?php echo L(General_model);?></h3>
+            <div class="title"><?php echo L(SINCE_2002);?></div>
 
             <div class="content">
                 <?php $n=0;foreach($Categorys as $key=>$r):if($n<100) :if( intval(112)==$r["parentid"] ) :++$n; if($r[isfooter]!=1) : ?>
@@ -480,8 +482,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div style="padding-bottom: 40px;">
     <a id="special"></a>
-    <h3> <span>YIZUMI</span> Special Models </h3>
-    <div class="title">SINCE 2002</div>
+    <h3> <span><?php echo L(YIZUMI);?></span> <?php echo L(Special_Models);?> </h3>
+    <div class="title"><?php echo L(SINCE_2002);?></div>
 </div>
                 <?php $n=0;foreach($Categorys as $key=>$r):if($n<100) :if( intval(119)==$r["parentid"] ) :++$n; if($r[isfooter]!=1) : ?>
                 <div class="list  product-bg2">
@@ -521,7 +523,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="welcome">
         <div class="container">
             <div class="row">
-                <h2> Welcome to YIZUMI RUBBER MACHINERY CO., LTD.</h2>
+                <h2><?php echo L(Welcome_to_YIZUMI);?></h2>
             </div>
         </div>
     </div>
@@ -566,7 +568,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="row">
             <div class="content clearfix">
                 <div class="left col-lg-6 col-md-6 col-sm-6">
-                    <a href="" class="footer-logo"><img src="/Public/www/images/logo_foot.png" alt=""></a>
+                    <a href="/index.php" class="footer-logo"><img src="/Public/www/images/logo_foot.png" alt=""></a>
                     <div class="copy"><?php echo ($name); ?></div>
                     <ul>
                         <li>
@@ -577,7 +579,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li><a href="<?php echo ($wwwurl); ?>" target="_black"><?php echo ($wwwurl); ?></a></li>
                     </ul>
                     <div class="footer-share">
-                        <a class="facebook" href="<?php echo ($ins); ?>"
+                        <a class="facebook" href="<?php echo ($facebook); ?>"
                             target="_blank">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                         </a>
@@ -591,33 +593,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <form name="form" method="post" onsubmit="return beforeSubmit2(this);"
                         action="index.php?g=Home&amp;a=message">
                         <div class="box clearfix">
-                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">Name <span>*</span> </div>
+                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5"><?php echo L(Name);?> <span>*</span> </div>
                             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="name" id=""
-                                    placeholder="Your Name">
+                                    placeholder="<?php echo L(Your_Name);?>">
                             </div>
                         </div>
                         <div class="box clearfix">
-                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">Email <span>*</span> </div>
+                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5"><?php echo L(Email);?> <span>*</span> </div>
                             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="email" id=""
-                                    placeholder="Your Email">
+                                    placeholder="<?php echo L(Your_Email);?>">
                             </div>
                         </div>
                         <div class="box clearfix">
                             <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                Company name <span>*</span> </div>
+                                <?php echo L(Company_name);?> <span>*</span> </div>
                             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="com" id=""
-                                    placeholder="Your Company">
+                                    placeholder="<?php echo L(Your_Company);?>">
                             </div>
                         </div>
                         <div class="box clearfix">
                             <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                Message <span>*</span> </div>
-                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <textarea placeholder="Your Message"
+                                <?php echo L(Message);?> <span>*</span> </div>
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <textarea placeholder="<?php echo L(Your_Message);?>"
                                     name="message" id=""></textarea>
                             </div>
                         </div>
 
-                        <input type="submit" value="Submit Form" class="submit-btn">
+                        <input type="submit" value="<?php echo L(Submit_Form);?>" class="submit-btn">
                     </form>
                 </div>
             </div>
@@ -628,9 +630,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 </body>
-
 <script src="__PUBLIC__/www/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/www/js/main.js"></script>
 
 </html>
+<a href="/Public/www/images/New-Catalogue.pdf" target="_black" class="contact-btn pull-right download">
+    
+</a>
+
 <?php endif;?>

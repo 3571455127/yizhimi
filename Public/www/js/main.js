@@ -58,7 +58,7 @@ $(function () {
 
     // up
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 10) {
+        if ($(window).scrollTop() > 100) {
             $(".scroll-top").show(600)
         } else {
             $(".scroll-top").hide(600)

@@ -43,7 +43,7 @@
   \\\'flashupload\\\' => \\\'1\\\',
   \\\'alowuploadexts\\\' => \\\'\\\',
   \\\'alowuploadlimit\\\' => \\\'20\\\',
-)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '5', 'status' => '1', 'issystem' => '0', ), 'sjcon' => array ( 'id' => '139', 'moduleid' => '6', 'field' => 'sjcon', 'name' => '移动端内容', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'editor', 'setup' => 'array (
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '5', 'status' => '1', 'issystem' => '0', ), 'sjcont' => array ( 'id' => '139', 'moduleid' => '6', 'field' => 'sjcont', 'name' => '移动端内容', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '0', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'editor', 'setup' => 'array (
   \\\'edittype\\\' => \\\'kindeditor\\\',
   \\\'toolbar\\\' => \\\'full\\\',
   \\\'default\\\' => \\\'\\\',

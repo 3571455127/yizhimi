@@ -14,9 +14,11 @@
             <h3>{:L(Intelligent_Simple)}</h3>
             <p>{:L(Yizumi_devoted_tom)}</p>
         </div>
-
+       
     </div>
+  
 </div>
+
 
 <div class="index">
 
@@ -27,7 +29,7 @@
 
             <div class="container">
                 <div class="row">
-                    <?php getcatvar('page','id = 110','cont');?>
+                    <?php getcatvar('page','id = 110','sjcont');?>
                 </div>
             </div>
         </div>
@@ -38,7 +40,7 @@
         <a id="technology"></a>
         <div class="technology">
             <div class="content clearfix">
-               <?php getcatvar('page','id = 111','cont');?>
+               <?php getcatvar('page','id = 111','sjcont');?>
             </div>
         </div>
     </div>
@@ -61,7 +63,7 @@
                                     <a id="{$r.catdir}"></a>
                                     <h6>{$r.catname}</h6>
                                     <YP:list name='product' field="*" order="listorder asc" catid="$r[id]" id="rr">
-                                    {$rr.cont}
+                                    {$rr.sjcont}
                                     </YP:list>
                                 </div>
                             </div>
@@ -76,7 +78,7 @@
                                     <a id="{$r.catdir}"></a>
                                     <h6>{$r.catname}</h6>
                                     <YP:list name='product' field="*" order="listorder asc" catid="$r[id]" id="rr">
-                                    {$rr.cont}
+                                    {$rr.sjcont}
                                     </YP:list>
                                 </div>
                             </div>
@@ -102,7 +104,7 @@
                                 <a id="{$r.catdir}"></a>
                                 <h6>{$r.catname}</h6>
                                  <YP:list name='product' field="*" order="listorder asc" catid="$r[id]" id="rr">
-                                    {$rr.cont}
+                                    {$rr.sjcont}
                                     </YP:list>
                             </div>
 
@@ -118,7 +120,7 @@
                                 <a id="{$r.catdir}"></a>
                                 <h6>{$r.catname}</h6>
                                  <YP:list name='product' field="*" order="listorder asc" catid="$r[id]" id="rr">
-                                    {$rr.cont}
+                                    {$rr.sjcont}
                                     </YP:list>
                             </div>
                             </div>
@@ -147,7 +149,7 @@
         <div class="service">
             <div class="container">
                 <div class="row">
-                    <?php getcatvar('page','id = 125','cont');?>
+                    <?php getcatvar('page','id = 125','sjcont');?>
 
                 </div>
             </div>
@@ -181,7 +183,7 @@
         <div class="row">
             <div class="content clearfix">
                 <div class="left col-lg-6 col-md-6 col-sm-6">
-                    <a href="" class="footer-logo"><img src="/Public/www/images/logo_foot.png" alt=""></a>
+                    <a href="/index.php" class="footer-logo"><img src="/Public/www/images/logo_foot.png" alt=""></a>
                     <div class="copy">{$name}</div>
                     <ul>
                         <li>
@@ -192,7 +194,7 @@
                         <li><a href="{$wwwurl}" target="_black">{$wwwurl}</a></li>
                     </ul>
                     <div class="footer-share">
-                        <a class="facebook" href="{$ins}"
+                        <a class="facebook" href="{$facebook}"
                             target="_blank">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                         </a>

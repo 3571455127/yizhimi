@@ -924,20 +924,15 @@ header .navbar-default .navbar-nav .second-nav a {
     margin: 0;
 }
 
-.index .product .product-bg2 {
+.index .product .list .pro {
     margin-bottom: 50px;
 }
 
 .index .product .product-bg {
-    background-image: url("../images/product-bgs.png");
-    background-repeat: no-repeat;
+    background: url("../images/product-bgs.png")no-repeat;
     background-size: cover;
     padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.index .product .content>.list:nth-child(4) {
-    background-position: center -533px;
+    margin-bottom: 50px;
 }
 
 .index .product .product-bg .text .product-btn .contact-btn {
@@ -958,6 +953,12 @@ header .navbar-default .navbar-nav .second-nav a {
     text-align: center;
     margin-top: 30px;
 }
+
+
+.index .product .content>.list:nth-child(3) {
+    margin-bottom: 0;
+}
+
 
 /* product end */
 /* welcome  */
@@ -1157,7 +1158,7 @@ footer .footer-share i:hover {
 .scroll-top {
     background: #68b92f;
     border: 2px solid #68b92f;
-    bottom: 25px;
+    bottom: 150px;
     color: #fff;
     cursor: pointer;
     display: none;
@@ -1239,6 +1240,11 @@ header .wap-nav {
         line-height: 1.425;
         text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.8);
     }
+
+    .index .product .content>.list:nth-child(4) {
+        background-position: center -533px;
+    }
+
 }
 
 @media screen and (max-width:1680px) {
@@ -1410,13 +1416,13 @@ header .wap-nav {
 
     .index .product .content>.list:nth-child(3) {
         background-size: 150%;
-        background-position: -30px 0;
     }
 
     .index .product .content>.list:nth-child(4) {
-        background-position: -23px -516px;
+        background-position: 0 -533px;
         background-size: 150%;
     }
+
 }
 
 @media (min-width:770px) and (max-width: 1320px) {
@@ -1545,7 +1551,7 @@ header .wap-nav {
 
     .index .contact-btn {
         font-size: 16px;
-        width: 160px;
+        width: 150px;
     }
 
     .index .product .list .pro {
@@ -1554,6 +1560,7 @@ header .wap-nav {
 
     .index .welcome {
         padding: 30px 0;
+        background: url("../images/we-bg.jpg")no-repeat;
     }
 
     .index .welcome h2 {
@@ -1615,7 +1622,7 @@ header .wap-nav {
     }
 
     .index .technology .technology-bg .list .txt {
-        margin-top: 0;
+        margin-top: 156px;
         padding: 10px;
     }
 
@@ -1841,4 +1848,32 @@ header .wap-nav {
     }
 
     /* wap end */
+
+    .index .product .text .pro-bg .box-img img {
+        height: auto;
+    }
+
+    .index .product .text .pro-bg .box-img p {
+        font-size: 13px;
+    }
+
+    .index .product .content>.list:nth-child(3) {
+        background-size: cover;
+        background-position: 0 10px;
+    }
+
+    .index .product .content>.list:nth-child(4) {
+        background-size: cover;
+        background-position: 0 -10px;
+    }
+
+    .video {
+        margin-top: 62px;
+        height: 300px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
