@@ -70,7 +70,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only">{:L(Toggle_navigation)}</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -81,7 +81,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div id="navbar-example">
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-left">
-                            <li class="active"><a href="#home">Home</a></li>
+                            <li class="active"><a href="#home">{:L(HOME_FONT)}</a></li>
                             <YP:subcat catid="0" id="r" field="*" where="listorder asc" limit="100" key="n">
                             <if condition="$r[ismenu]!=1">
                             <li class="general">
@@ -134,7 +134,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="nav_right">
                     <div class="nav_rin">
                         <ul class="menu_ul">
-                            <li><a href="#home" title="">HOME</a></li>
+                            <li><a href="#home" title="">{:L(HOME_FONT)}</a></li>
                             <YP:subcat catid="0" id="r" field="*" where="listorder asc" limit="100" key="n">
                                 <if condition="$r[ismenu]!=1">
                             <li class="active menu_li">

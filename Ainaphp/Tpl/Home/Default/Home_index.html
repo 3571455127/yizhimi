@@ -11,8 +11,8 @@
 
 
         <div class="percentage">
-            <h3>Intelligent. Simple. </h3>
-            <p>Yizumi devoted to making the production and management of rubber parts intelligent and simple</p>
+            <h3>{:L(Intelligent_Simple)}</h3>
+            <p>{:L(Yizumi_devoted_tom)}</p>
         </div>
 
     </div>
@@ -47,8 +47,8 @@
     <div>
         <a id="general"></a>
         <div class="product">
-            <h3> <span>YIZUMI</span> General model</h3>
-            <div class="title">SINCE 2002</div>
+            <h3> <span>{:L(YIZUMI)}</span>{:L(General_model)}</h3>
+            <div class="title">{:L(SINCE_2002)}</div>
 
             <div class="content">
                 <YP:subcat catid="112" id="r" where="listorder asc" field="*" limit="100" key="n">
@@ -89,8 +89,8 @@
 
 <div style="padding-bottom: 40px;">
     <a id="special"></a>
-    <h3> <span>YIZUMI</span> Special Models </h3>
-    <div class="title">SINCE 2002</div>
+    <h3> <span>{:L(YIZUMI)}</span> {:L(Special_Models)} </h3>
+    <div class="title">{:L(SINCE_2002)}</div>
 </div>
                 <YP:subcat catid="119" id="r" where="listorder asc" field="*" limit="100" key="n">
                 {if $r[isfooter]!=1}
@@ -136,7 +136,7 @@
     <div class="welcome">
         <div class="container">
             <div class="row">
-                <h2> Welcome to YIZUMI RUBBER MACHINERY CO., LTD.</h2>
+                <h2>{:L(Welcome_to_YIZUMI)}</h2>
             </div>
         </div>
     </div>
@@ -206,33 +206,33 @@
                     <form name="form" method="post" onsubmit="return beforeSubmit2(this);"
                         action="index.php?g=Home&amp;a=message">
                         <div class="box clearfix">
-                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">Name <span>*</span> </div>
+                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">{:L(Name)} <span>*</span> </div>
                             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="name" id=""
-                                    placeholder="Your Name">
+                                    placeholder="{:L(Your_Name)}">
                             </div>
                         </div>
                         <div class="box clearfix">
-                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">Email <span>*</span> </div>
+                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">{:L(Email)} <span>*</span> </div>
                             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="email" id=""
-                                    placeholder="Your Email">
+                                    placeholder="{:L(Your_Email)}">
                             </div>
                         </div>
                         <div class="box clearfix">
                             <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                Company name <span>*</span> </div>
+                                {:L(Company_name)} <span>*</span> </div>
                             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="com" id=""
-                                    placeholder="Your Company">
+                                    placeholder="{:L(Your_Company)}">
                             </div>
                         </div>
                         <div class="box clearfix">
                             <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                Message <span>*</span> </div>
-                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <textarea placeholder="Your Message"
+                                {:L(Message)} <span>*</span> </div>
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <textarea placeholder="{:L(Your_Message)}"
                                     name="message" id=""></textarea>
                             </div>
                         </div>
 
-                        <input type="submit" value="Submit Form" class="submit-btn">
+                        <input type="submit" value="{:L(Submit_Form)}" class="submit-btn">
                     </form>
                 </div>
             </div>
