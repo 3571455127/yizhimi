@@ -1,5 +1,25 @@
 {if isMobile()}
-<include file="Home:Mobile" />
+{if $Think.LANG_SET==de}
+<include file="Home:headerde" />
+<include file="Home:Mobilede" />
+{elseif  $Think.LANG_SET==it}
+<include file="Home:headerall" />
+<include file="Home:Mobileit" />
 {else}
+<include file="Home:headerall" />
+<include file="Home:Mobile" />
+{/if}
+
+{else}
+{if $Think.LANG_SET==de}
+<include file="Home:headerde" />
+<include file="Home:indexde" />
+{elseif  $Think.LANG_SET==it}
+<include file="Home:headerall" />
+<include file="Home:indexit" />
+{else}
+<include file="Home:headerall" />
 <include file="Home:index" />
+{/if}
+
 {/if}

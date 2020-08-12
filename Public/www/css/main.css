@@ -1205,7 +1205,6 @@ header .wap-nav {
     display: none;
 }
 
-
 /* 响应式 */
 
 @media screen and (max-width:1920px) {
@@ -1245,6 +1244,10 @@ header .wap-nav {
         background-position: center -533px;
     }
 
+    header .de .navbar-nav {
+        padding: 0 3%;
+    }
+    
 }
 
 @media screen and (max-width:1680px) {
@@ -1304,6 +1307,11 @@ header .wap-nav {
     header .navbar-default .navbar-nav {
         padding: 0;
     }
+    
+    header .de .navbar-nav>li>a{
+        padding: 35px 12px;
+    }
+
 }
 
 
@@ -1551,7 +1559,7 @@ header .wap-nav {
 
     .index .contact-btn {
         font-size: 16px;
-        width: 150px;
+        width: 160px;
     }
 
     .index .product .list .pro {
@@ -1560,7 +1568,6 @@ header .wap-nav {
 
     .index .welcome {
         padding: 30px 0;
-        background: url("../images/we-bg.jpg")no-repeat;
     }
 
     .index .welcome h2 {
@@ -1622,7 +1629,7 @@ header .wap-nav {
     }
 
     .index .technology .technology-bg .list .txt {
-        margin-top: 156px;
+        margin-top: 155px;
         padding: 10px;
     }
 
@@ -1848,18 +1855,9 @@ header .wap-nav {
     }
 
     /* wap end */
-
-    .index .product .text .pro-bg .box-img img {
-        height: auto;
-    }
-
-    .index .product .text .pro-bg .box-img p {
-        font-size: 13px;
-    }
-
     .index .product .content>.list:nth-child(3) {
-        background-size: cover;
-        background-position: 0 10px;
+        background-size: 300%;
+        background-position: center;
     }
 
     .index .product .content>.list:nth-child(4) {
@@ -1867,13 +1865,34 @@ header .wap-nav {
         background-position: 0 -10px;
     }
 
-    .video {
-        margin-top: 62px;
-        height: 300px;
+    .index .product .text .pro-bg .box-img img {
+        height: auto;
     }
 
-    img {
-        max-width: 100%;
-        height: auto;
+    .wap-language {
+        position: relative;
+        margin-right: 50px;
+    }
+
+    .wap-language img {
+        cursor: pointer;
+    }
+
+    .wap-language-box {
+        background: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+        padding: 10px;
+        display: none;
+    }
+
+    .wap-language-box a {
+        display: block;
+        font-size: 15px;
+        color: #fff;
+        padding: 3px 0px;
     }
 }

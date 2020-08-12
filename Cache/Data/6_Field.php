@@ -9,7 +9,7 @@
   \\\'numbertype\\\' => \\\'1\\\',
   \\\'labelwidth\\\' => \\\'\\\',
   \\\'default\\\' => \\\'1\\\',
-)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '1', 'issystem' => '0', ), 'keywords' => array ( 'id' => '44', 'moduleid' => '6', 'field' => 'keywords', 'name' => '关键词', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '80', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
+)', 'ispost' => '0', 'unpostgroup' => '', 'listorder' => '0', 'status' => '0', 'issystem' => '0', ), 'keywords' => array ( 'id' => '44', 'moduleid' => '6', 'field' => 'keywords', 'name' => '关键词', 'tips' => '', 'required' => '0', 'minlength' => '0', 'maxlength' => '80', 'pattern' => '0', 'errormsg' => '', 'class' => '', 'type' => 'text', 'setup' => 'array (
   \\\'size\\\' => \\\'55\\\',
   \\\'default\\\' => \\\'\\\',
   \\\'ispassword\\\' => \\\'0\\\',

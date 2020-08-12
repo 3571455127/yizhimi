@@ -58,7 +58,7 @@ $(function () {
 
     // up
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 100) {
+        if ($(window).scrollTop() > 10) {
             $(".scroll-top").show(600)
         } else {
             $(".scroll-top").hide(600)
@@ -83,6 +83,39 @@ $(function () {
         }
     });
     if ($(window).width() <= 768) {
+        // product
+        $(".technology-bg .box-img").click(function () {
+            $(this).next().css({
+                "margin-top": "0",
+            })
+        });
+        $(".technology-bg .txt").click(function () {
+            $(this).css({
+                "margin-top": "155px",
+            })
+        })
+        $(".product .box-pore").click(function () {
+            $(this).next().css({
+                "margin-top": "0",
+                "opacity": "1"
+            });
+            $(this).children("h6").hide();
+        });
+
+        $(".product .box-img .txt").click(function () {
+            $(this).css({
+                "margin-top": "560px",
+                "opacity": "0"
+            });
+            $(this).prev().children("h6").show();
+        });
+
+        // language
+        $(".wap-language img").click(function () {
+            // console.log("img");
+            var flag = $(this).next().is(':hidden');
+            flag ? $(".wap-language-box").show() : $(".wap-language-box").hide();
+        })
     }
 })
 

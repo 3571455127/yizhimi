@@ -1,26 +1,146 @@
-
-<!--面包屑导航-->
-<div class="mianbao">
-    <div class="mb_dao">
-        <img src="__PUBLIC__/www/images/home-icon.png" alt="" onclick="window.open('http://<?php echo $_SERVER['HTTP_HOST']?>','_self');" />
-    </div>
-</div>
-
-<!--联系我们内容部分-->
-<div class="contact" style="background: #ffffff;margin-top: 150px;padding: 80px 0">
-    <h4 style="height: 30px;">Thanks for your inquiry!</h4>
-    <div class="contact_center">
-        <div class="center_left" style="text-align: center;width: 100%;">
-            <p>Our Professional Team Will Contact With You In 24 Hours.</p>
-        </div>
-
-    </div>
-    <div class="map_div">
-        <iframe src="http://www.google.cn/maps/embed?pb=!1m18!1m12!1m3!1d3677.8552198953444!2d113.23522731543332!3d22.807827985062172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340248e1962a1313%3A0x32246cb8177d4ac2!2z5bm_5Lic55yB5L2b5bGx5biC6aG65b635Yy66L-e5a6J57q_!5e0!3m2!1szh-CN!2scn!4v1539765743992" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
-
-</div>
-<!--顶部图片-->
-<div class="top_img">
-  <img src="__PUBLIC__/www/images/product_bander.jpg" alt="" />
-</div>
+<div class="thank">
+    <div class="container">
+        <div class="row">
+            <h5>Thanks for your inquiry!</h5>
+            <p>Our Professional Team Will Contact With You In 24 Hours</p>
+            <a class="link" href="/" onclick="history.go(-1)"><span id="sec">5</span>s Back Home</a>
+            <img class="back" src="__PUBLIC__/www/images/back.png" alt="back" onClick="javascript :history.go(-1);" />
+        </div>
+    </div>
+</div>
+<style>
+    @media screen and (max-width: 1920px) {
+        .thank {
+            padding: 134.5px 0;
+            text-align: center;
+        }
+    }
+
+    @media screen and (max-width: 1366px) {
+        .thank {
+            padding: 50px 0;
+            text-align: center;
+        }
+    }
+
+    .thank h5,
+    .thank p {
+        line-height: 1.4;
+        font-size: 24px;
+        padding-bottom: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .thank {
+            padding: 80px 0 50px 0;
+            text-align: center;
+        }
+
+        .thank p {
+            font-size: 16px;
+            padding-bottom: 10px;
+        }
+    }
+
+
+
+    .thank .back {
+        padding-left: 10px;
+        width: 32px;
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+</style>
+<script>
+    $(function () {
+        setTimeout("lazyGo();", 1000);
+    });
+
+    function lazyGo() {
+        var sec = $("#sec").text();
+        $("#sec").text(--sec);
+        if (sec > 0)
+            setTimeout("lazyGo();", 1000);
+        else
+
+            javascript: history.back(-1);
+    }
+</script>
+
+
+<!-- footer  -->
+<footer>
+    <a href="" target="_black" class="download">
+        <i class="fa fa-cloud-download" aria-hidden="true"></i>
+    </a>
+
+    <div class="container">
+        <div class="row">
+            <div class="content clearfix">
+                <div class="left col-lg-6 col-md-6 col-sm-6">
+                    <a href="" class="footer-logo"><img src="/Public/www/images/logo_foot.png" alt=""></a>
+                    <div class="copy">{$name}</div>
+                    <ul>
+                        <li>
+                            {$address}
+                        </li>
+
+                        <li>{$phone} </li>
+                        <li><a href="{$wwwurl}" target="_black">{$wwwurl}</a></li>
+                    </ul>
+                    <div class="footer-share">
+                        <a class="facebook" href="{$ins}" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a class="youtube" href="{$youtube}" target="_blank">
+                            <i class="fa fa-youtube" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="right col-lg-6 col-md-6 col-sm-6">
+                    <form name="form" method="post" onsubmit="return beforeSubmit2(this);"
+                        action="index.php?g=Home&a=message">
+                        <div class="box clearfix">
+                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">Name <span>*</span> </div>
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="name" id=""
+                                    placeholder="Your Name">
+                            </div>
+                        </div>
+                        <div class="box clearfix">
+                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">Email <span>*</span> </div>
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="email" id=""
+                                    placeholder="Your Email">
+                            </div>
+                        </div>
+                        <div class="box clearfix">
+                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                Company name <span>*</span> </div>
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="com" id=""
+                                    placeholder="Your Company">
+                            </div>
+                        </div>
+                        <div class="box clearfix">
+                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                Message <span>*</span> </div>
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <textarea placeholder="Your Message"
+                                    name="message" id=""></textarea>
+                            </div>
+                        </div>
+
+                        <input type="submit" value="Submit Form" class="submit-btn">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- up -->
+    <i class="fa fa-angle-up scroll-top" aria-hidden="true"></i>
+</footer>
+
+</body>
+
+<script src="__PUBLIC__/www/js/bootstrap.min.js"></script>
+<script src="__PUBLIC__/www/js/main.js"></script>
+
+</html>
