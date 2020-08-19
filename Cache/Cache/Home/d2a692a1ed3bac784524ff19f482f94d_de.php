@@ -181,7 +181,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="pro clearfix">
                                     <a id="<?php echo ($r["catdir"]); ?>"></a>
                                     <h6><?php echo ($r["catname"]); ?></h6>
-                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
+                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
                                 </div>
                             </div>
                         </div>
@@ -193,7 +193,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="pro clearfix">
                                     <a id="<?php echo ($r["catdir"]); ?>"></a>
                                     <h6><?php echo ($r["catname"]); ?></h6>
-                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
+                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
                                 </div>
                             </div>
                         </div>
@@ -212,7 +212,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="pro clearfix">
                                 <a id="<?php echo ($r["catdir"]); ?>"></a>
                                 <h6><?php echo ($r["catname"]); ?></h6>
-                                <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
+                                <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
                             </div>
                         </div>
                     </div>
@@ -224,7 +224,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="pro clearfix">
                                 <a id="<?php echo ($r["catdir"]); ?>"></a>
                                 <h6><?php echo ($r["catname"]); ?></h6>
-                                <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
+                                <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
                             </div>
                         </div>
                     </div>
@@ -545,7 +545,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="pro clearfix">
                                     <a id="<?php echo ($r["catdir"]); ?>"></a>
                                     <h6><?php echo ($r["catname"]); ?></h6>
-                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
+                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
                                 </div>
                             </div>
                         </div>
@@ -557,7 +557,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="pro clearfix">
                                     <a id="<?php echo ($r["catdir"]); ?>"></a>
                                     <h6><?php echo ($r["catname"]); ?></h6>
-                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
+                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
                                 </div>
                             </div>
                         </div>
@@ -576,7 +576,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="pro clearfix">
                                 <a id="<?php echo ($r["catdir"]); ?>"></a>
                                 <h6><?php echo ($r["catname"]); ?></h6>
-                                <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
+                                <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
                             </div>
                         </div>
                     </div>
@@ -588,7 +588,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="pro clearfix">
                                 <a id="<?php echo ($r["catdir"]); ?>"></a>
                                 <h6><?php echo ($r["catname"]); ?></h6>
-                                <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
+                                <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
                             </div>
                         </div>
                     </div>
@@ -910,7 +910,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="pro clearfix">
                                     <a id="<?php echo ($r["catdir"]); ?>"></a>
                                     <h6><?php echo ($r["catname"]); ?></h6>
-                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
+                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
                                 </div>
                             </div>
                         </div>
@@ -923,7 +923,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <div class="pro clearfix">
                                         <a id="<?php echo ($r["catdir"]); ?>"></a>
                                         <h6><?php echo ($r["catname"]); ?></h6>
-                                        <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
+                                        <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
                                     </div>
                                 </div>
                             </div>
@@ -942,7 +942,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="pro clearfix">
                                     <a id="<?php echo ($r["catdir"]); ?>"></a>
                                     <h6><?php echo ($r["catname"]); ?></h6>
-                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
+                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
                                 </div>
                             </div>
                         </div>
@@ -954,7 +954,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="pro clearfix">
                                     <a id="<?php echo ($r["catdir"]); ?>"></a>
                                     <h6><?php echo ($r["catname"]); ?></h6>
-                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
+                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["sjcont"]); endforeach; endif;?>
                                 </div>
                             </div>
                         </div>
@@ -1290,7 +1290,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="pro clearfix">
                                     <a id="<?php echo ($r["catdir"]); ?>"></a>
                                     <h6><?php echo ($r["catname"]); ?></h6>
-                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
+                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
                                 </div>
                             </div>
                         </div>
@@ -1302,7 +1302,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="pro clearfix">
                                     <a id="<?php echo ($r["catdir"]); ?>"></a>
                                     <h6><?php echo ($r["catname"]); ?></h6>
-                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
+                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
                                 </div>
                             </div>
                         </div>
@@ -1321,7 +1321,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="pro clearfix">
                                 <a id="<?php echo ($r["catdir"]); ?>"></a>
                                 <h6><?php echo ($r["catname"]); ?></h6>
-                                <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
+                                <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
                             </div>
                         </div>
                     </div>
@@ -1333,7 +1333,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="pro clearfix">
                                 <a id="<?php echo ($r["catdir"]); ?>"></a>
                                 <h6><?php echo ($r["catname"]); ?></h6>
-                                <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
+                                <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
                             </div>
                         </div>
                     </div>
@@ -1695,7 +1695,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="pro clearfix">
                                     <a id="<?php echo ($r["catdir"]); ?>"></a>
                                     <h6><?php echo ($r["catname"]); ?></h6>
-                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
+                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
                                 </div>
                             </div>
                         </div>
@@ -1707,7 +1707,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="pro clearfix">
                                     <a id="<?php echo ($r["catdir"]); ?>"></a>
                                     <h6><?php echo ($r["catname"]); ?></h6>
-                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
+                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
                                 </div>
                             </div>
                         </div>
@@ -1726,7 +1726,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="pro clearfix">
                                 <a id="<?php echo ($r["catdir"]); ?>"></a>
                                 <h6><?php echo ($r["catname"]); ?></h6>
-                                <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
+                                <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
                             </div>
                         </div>
                     </div>
@@ -1738,7 +1738,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="pro clearfix">
                                 <a id="<?php echo ($r["catdir"]); ?>"></a>
                                 <h6><?php echo ($r["catname"]); ?></h6>
-                                <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
+                                <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
                             </div>
                         </div>
                     </div>
@@ -2101,7 +2101,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="pro clearfix">
                                     <a id="<?php echo ($r["catdir"]); ?>"></a>
                                     <h6><?php echo ($r["catname"]); ?></h6>
-                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
+                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
                                 </div>
                             </div>
                         </div>
@@ -2114,7 +2114,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <div class="pro clearfix">
                                         <a id="<?php echo ($r["catdir"]); ?>"></a>
                                         <h6><?php echo ($r["catname"]); ?></h6>
-                                        <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
+                                        <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
                                     </div>
                                 </div>
                             </div>
@@ -2133,7 +2133,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="pro clearfix">
                                     <a id="<?php echo ($r["catdir"]); ?>"></a>
                                     <h6><?php echo ($r["catname"]); ?></h6>
-                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
+                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
                                 </div>
                             </div>
                         </div>
@@ -2145,7 +2145,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="pro clearfix">
                                     <a id="<?php echo ($r["catdir"]); ?>"></a>
                                     <h6><?php echo ($r["catname"]); ?></h6>
-                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=1 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
+                                    <?php  $_result=M("product")->field("*")->where(" 1  and lang=2 AND status=1  AND catid in($r[id])")->order("listorder asc")->limit("10")->select();; if ($_result): $i=0;foreach($_result as $key=>$rr):++$i;$mod = ($i % 2 ); echo ($rr["cont"]); endforeach; endif;?>
                                 </div>
                             </div>
                         </div>

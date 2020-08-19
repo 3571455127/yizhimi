@@ -146,9 +146,48 @@
 </div>
 <!-- footer  -->
 <footer>
-    <a href="__PUBLIC__/www/images/New-Catalogue.pdf" target="_black" class="download">
-        <i class="fa fa-cloud-download" aria-hidden="true"></i>
-    </a>
+    <div class="down-box">
+        <a href="__PUBLIC__/www/images/New-Catalogue.pdf" target="_blank" class="download">
+            <i class="fa fa-cloud-download" aria-hidden="true"></i>
+        </a>
+        <div class="download" data-toggle="modal" data-target="#myModal">
+            <i class="fa fa-cloud-download" aria-hidden="true"></i>
+        </div>
+        <!-- 弹窗表单 -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Please submit message to download album</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="clearfix" name="form" method="post" onsubmit="return beforeSubmit3(this);"
+                            action="index.php?g=Home&a=message2">
+                            <div class="input-box clearfix">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" name="name" placeholder="* {:L(Your_Name)}">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" name="email" placeholder="* {:L(Your_Email)}">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" name="cou" placeholder="* {:L(Your_Country)}">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" name="com" placeholder="* {:L(Your_Company)}">
+                                </div>
+                                <div class="down-submit">
+                                    <input type="submit" value="Submit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="content clearfix">
