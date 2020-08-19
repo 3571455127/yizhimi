@@ -1,252 +1,259 @@
-<!-- video -->
-<div>
-    <a id="home"></a>
-    <div class="video">
-        <video id="video" muted="muted" autoplay="autoplay" loop="loop"
-            style="width:100%; height:100%; object-fit: fill" src="__PUBLIC__/www/video/0723.mp4">
-        </video>
-        <div id="loading">
-            <i class="fa fa-spinner fa-pulse"></i>
-        </div>
-
-
-        <div class="percentage">
-            <h3>{:L(Intelligent_Simple)}</h3>
-            <p>{:L(Yizumi_devoted_tom)}</p>
-        </div>
-       
-    </div>
-  
-</div>
-
-
-<div class="index">
-
-    <!-- company -->
-    <div>
-        <a id="company"></a>
-        <div class="about">
-
-            <div class="container">
-                <div class="row">
-                    <?php getcatvar('page','id = 110','sjcont');?>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- technology -->
-    <div>
-        <a id="technology"></a>
-        <div class="technology">
-            <div class="content clearfix">
-               <?php getcatvar('page','id = 111','sjcont');?>
-            </div>
-        </div>
-    </div>
-
-    <!-- product -->
-    <div>
-        <a id="general"></a>
-        <div class="product">
-            <h3> <span>{:L(YIZUMI)}</span> {:L(General_model)}</h3>
-            <div class="title">{:L(SINCE_2002)}</div>
-
-            <div class="content">
-                <YP:subcat catid="112" id="r" where="listorder asc" field="*" limit="100" key="n">
-                  
-                        {if $r[isfooter]!=1}
-                    <div class="list product-bg2">
-                        <div class="container">
-                            <div class="row">
-                                <div class="pro clearfix">
-                                    <a id="{$r.catdir}"></a>
-                                    <h6>{$r.catname}</h6>
-                                    <YP:list name='product' field="*" order="listorder asc" catid="$r[id]" id="rr">
-                                    {$rr.sjcont}
-                                    </YP:list>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    {else}
-                <div class="list product-bg" {if $r[id]==116}style="margin-bottom: 50px;"{/if}>
-                    <div class="">
-                        <div class="container">
-                            <div class="row">
-<div class="pro clearfix">
-                                    <a id="{$r.catdir}"></a>
-                                    <h6>{$r.catname}</h6>
-                                    <YP:list name='product' field="*" order="listorder asc" catid="$r[id]" id="rr">
-                                    {$rr.sjcont}
-                                    </YP:list>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                   {/if}
-                    </YP:subcat>
-
-<div style="padding-bottom: 40px;">
-    <a id="special"></a>
-    <h3> <span>{:L(YIZUMI)}</span> {:L(Special_Models)} </h3>
-    <div class="title">{:L(SINCE_2002)}</div>
-</div>
-                <YP:subcat catid="119" id="r" where="listorder asc" field="*" limit="100" key="n">
-                {if $r[isfooter]!=1}
-                <div class="list  product-bg2">
-                    <div class="container">
-                        <div class="row">
-
-                            <div class="pro clearfix">
-                                <a id="{$r.catdir}"></a>
-                                <h6>{$r.catname}</h6>
-                                 <YP:list name='product' field="*" order="listorder asc" catid="$r[id]" id="rr">
-                                    {$rr.sjcont}
-                                    </YP:list>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-                {else}
-                <div class="list  product-bg" style="margin-bottom: 50px;">
-                        <div class="container">
-                            <div class="row">
-<div class="pro clearfix">
-                                <a id="{$r.catdir}"></a>
-                                <h6>{$r.catname}</h6>
-                                 <YP:list name='product' field="*" order="listorder asc" catid="$r[id]" id="rr">
-                                    {$rr.sjcont}
-                                    </YP:list>
-                            </div>
-                            </div>
-                        </div>
-                </div>
-                {/if}
-</YP:subcat>
-                
-            </div>
-
-        </div>
-    </div>
-
-    <!-- welcome -->
-    <div class="welcome">
-        <div class="container">
-            <div class="row">
-                <h2>{:L(Welcome_to_YIZUMI)}</h2>
-            </div>
-        </div>
-    </div>
-
-    <!-- Service -->
-    <div>
-        <a id="service"></a>
-        <div class="service">
-            <div class="container">
-                <div class="row">
-                    <?php getcatvar('page','id = 125','sjcont');?>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- map -->
-    <div class="map">
-
-        <div class="container">
-            <div class="row">
-                <div class="box-img"><img src="/Public/www/images/map.png" alt=""></div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- contact -->
-    <div>
-        <a id="contact"></a>
-    </div>
-</div>
-
-<!-- footer  -->
-<footer>
-    <a href="__PUBLIC__/www/images/New-Catalogue.pdf" target="_black" class="download">
-        <i class="fa fa-cloud-download" aria-hidden="true"></i>
-    </a>
-
-    <div class="container">
-        <div class="row">
-            <div class="content clearfix">
-                <div class="left col-lg-6 col-md-6 col-sm-6">
-                    <a href="/index.php" class="footer-logo"><img src="/Public/www/images/logo_foot.png" alt=""></a>
-                    <div class="copy">{$name}</div>
-                    <ul>
-                        <li>
-                            {$address}
-                        </li>
-
-                        <li>{$phone} </li>
-                        <li><a href="{$wwwurl}" target="_black">{$wwwurl}</a></li>
-                    </ul>
-                    <div class="footer-share">
-                        <a class="facebook" href="{$facebook}"
-                            target="_blank">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                        <a class="youtube" href="{$youtube}"
-                            target="_blank">
-                            <i class="fa fa-youtube" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="right col-lg-6 col-md-6 col-sm-6">
-                    <form name="form" method="post" onsubmit="return beforeSubmit2(this);"
-                        action="index.php?g=Home&amp;a=message">
-                        <div class="box clearfix">
-                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">{:L(Name)} <span>*</span> </div>
-                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="name" id=""
-                                    placeholder="{:L(Your_Name)}">
-                            </div>
-                        </div>
-                        <div class="box clearfix">
-                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">{:L(Email)} <span>*</span> </div>
-                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="email" id=""
-                                    placeholder="{:L(Your_Email)}">
-                            </div>
-                        </div>
-                        <div class="box clearfix">
-                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                {:L(Company_name)} <span>*</span> </div>
-                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="com" id=""
-                                    placeholder="{:L(Your_Company)}">
-                            </div>
-                        </div>
-                        <div class="box clearfix">
-                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                {:L(Message)} <span>*</span> </div>
-                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <textarea placeholder="{:L(Your_Message)}"
-                                    name="message" id=""></textarea>
-                            </div>
-                        </div>
-
-                        <input type="submit" value="{:L(Submit_Form)}" class="submit-btn">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- up -->
-    <i class="fa fa-angle-up scroll-top" aria-hidden="true"></i>
-</footer>
-
-</body>
-
-<script src="__PUBLIC__/www/js/bootstrap.min.js"></script>
-<script src="__PUBLIC__/www/js/main.js"></script>
-
+<!-- video -->
+<div>
+    <a id="home"></a>
+    <div class="video">
+        <video id="video" muted="muted" autoplay="autoplay" loop="loop"
+            style="width:100%; height:100%; object-fit: fill" src="__PUBLIC__/www/video/0723.mp4">
+        </video>
+        <div id="loading">
+            <i class="fa fa-spinner fa-pulse"></i>
+        </div>
+        <div class="percentage">
+            <h3>{:L(Intelligent_Simple)}</h3>
+            <p>{:L(Yizumi_devoted_tom)}</p>
+        </div>
+    </div>
+</div>
+<div class="index">
+    <!-- company -->
+    <div>
+        <a id="company"></a>
+        <div class="about">
+            <div class="container">
+                <div class="row">
+                    <?php getcatvar('page','id = 110','sjcont');?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- technology -->
+    <div>
+        <a id="technology"></a>
+        <div class="technology">
+            <div class="content clearfix">
+                <?php getcatvar('page','id = 111','sjcont');?>
+            </div>
+        </div>
+    </div>
+    <!-- product -->
+    <div>
+        <a id="general"></a>
+        <div class="product">
+            <h3> <span>{:L(YIZUMI)}</span> {:L(General_model)}</h3>
+            <div class="title">{:L(SINCE_2002)}</div>
+            <div class="content">
+                <YP:subcat catid="112" id="r" where="listorder asc" field="*" limit="100" key="n">
+                    {if $r[isfooter]!=1}
+                    <div class="list product-bg2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="pro clearfix">
+                                    <a id="{$r.catdir}"></a>
+                                    <h6>{$r.catname}</h6>
+                                    <YP:list name='product' field="*" order="listorder asc" catid="$r[id]" id="rr">
+                                        {$rr.sjcont}
+                                    </YP:list>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {else}
+                    <div class="list product-bg" {if $r[id]==116}style="margin-bottom: 50px;" {/if}>
+                        <div class="">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="pro clearfix">
+                                        <a id="{$r.catdir}"></a>
+                                        <h6>{$r.catname}</h6>
+                                        <YP:list name='product' field="*" order="listorder asc" catid="$r[id]" id="rr">
+                                            {$rr.sjcont}
+                                        </YP:list>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/if}
+                </YP:subcat>
+                <div style="padding-bottom: 40px;">
+                    <a id="special"></a>
+                    <h3> <span>{:L(YIZUMI)}</span> {:L(Special_Models)} </h3>
+                    <div class="title">{:L(SINCE_2002)}</div>
+                </div>
+                <YP:subcat catid="119" id="r" where="listorder asc" field="*" limit="100" key="n">
+                    {if $r[isfooter]!=1}
+                    <div class="list  product-bg2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="pro clearfix">
+                                    <a id="{$r.catdir}"></a>
+                                    <h6>{$r.catname}</h6>
+                                    <YP:list name='product' field="*" order="listorder asc" catid="$r[id]" id="rr">
+                                        {$rr.sjcont}
+                                    </YP:list>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {else}
+                    <div class="list  product-bg" style="margin-bottom: 50px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="pro clearfix">
+                                    <a id="{$r.catdir}"></a>
+                                    <h6>{$r.catname}</h6>
+                                    <YP:list name='product' field="*" order="listorder asc" catid="$r[id]" id="rr">
+                                        {$rr.sjcont}
+                                    </YP:list>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/if}
+                </YP:subcat>
+            </div>
+        </div>
+    </div>
+    <!-- welcome -->
+    <div class="welcome">
+        <div class="container">
+            <div class="row">
+                <h2>{:L(Welcome_to_YIZUMI)}</h2>
+            </div>
+        </div>
+    </div>
+    <!-- Service -->
+    <div>
+        <a id="service"></a>
+        <div class="service">
+            <div class="container">
+                <div class="row">
+                    <?php getcatvar('page','id = 125','sjcont');?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- map -->
+    <div class="map">
+        <div class="container">
+            <div class="row">
+                <div class="box-img"><img src="/Public/www/images/map.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <!-- contact -->
+    <div>
+        <a id="contact"></a>
+    </div>
+</div>
+<!-- footer  -->
+<footer>
+    
+    <div class="down-box">
+        <!-- <a href="__PUBLIC__/www/images/New-Catalogue.pdf" target="_black" class="download">
+        <i class="fa fa-cloud-download" aria-hidden="true"></i>
+         </a> -->
+        <div class="download" data-toggle="modal" data-target="#myModal">
+            <i class="fa fa-cloud-download" aria-hidden="true"></i>
+        </div>
+        <!-- 弹窗表单 -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Please submit message to download album</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="clearfix" name="form" method="post" onsubmit="return beforeSubmit3(this);"
+                            action="index.php?g=Home&a=message2">
+                            <div class="input-box clearfix">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" name="name" placeholder="{:L(Your_Name)}">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" name="email" placeholder="{:L(Your_Email)}">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" name="cou" placeholder="{:L(Your_Country)}">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" name="com" placeholder="{:L(Your_Company)}">
+                                </div>
+                                <div class="down-submit">
+                                    <input type="submit" value="Submit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="content clearfix">
+                <div class="left col-lg-6 col-md-6 col-sm-6">
+                    <a href="/index.php" class="footer-logo"><img src="/Public/www/images/logo_foot.png" alt=""></a>
+                    <div class="copy">{$name}</div>
+                    <ul>
+                        <li>
+                            {$address}
+                        </li>
+                        <li>{$phone} </li>
+                        <li><a href="{$wwwurl}" target="_black">{$wwwurl}</a></li>
+                    </ul>
+                    <div class="footer-share">
+                        <a class="facebook" href="{$facebook}" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a class="youtube" href="{$youtube}" target="_blank">
+                            <i class="fa fa-youtube" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="right col-lg-6 col-md-6 col-sm-6">
+                    <form name="form" method="post" onsubmit="return beforeSubmit2(this);"
+                        action="index.php?g=Home&amp;a=message">
+                        <div class="box clearfix">
+                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">{:L(Name)} <span>*</span> </div>
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="name" id=""
+                                    placeholder="{:L(Your_Name)}">
+                            </div>
+                        </div>
+                        <div class="box clearfix">
+                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">{:L(Email)} <span>*</span> </div>
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="email" id=""
+                                    placeholder="{:L(Your_Email)}">
+                            </div>
+                        </div>
+                        <div class="box clearfix">
+                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                {:L(Company_name)} <span>*</span> </div>
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <input type="text" name="com" id=""
+                                    placeholder="{:L(Your_Company)}">
+                            </div>
+                        </div>
+                        <div class="box clearfix">
+                            <div class="txt col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                {:L(Message)} <span>*</span> </div>
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"> <textarea placeholder="{:L(Your_Message)}"
+                                    name="message" id=""></textarea>
+                            </div>
+                        </div>
+                        <input type="submit" value="{:L(Submit_Form)}" class="submit-btn">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- up -->
+    <i class="fa fa-angle-up scroll-top" aria-hidden="true"></i>
+</footer>
+</body>
+<script src="__PUBLIC__/www/js/bootstrap.min.js"></script>
+<script src="__PUBLIC__/www/js/main.js"></script>
+
 </html>

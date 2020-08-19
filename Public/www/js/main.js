@@ -154,5 +154,37 @@ function beforeSubmit2(form) {
     }
 }
 
+var submitcount3 = 0;
+function beforeSubmit3(form) {
+    if (form.name.value == '') {
+        alert('Name can not be empty');
+        form.name.focus();
+        return false;
+    } else if (form.email.value == '') {
+        alert('Please enter the correct email format');
+        form.email.focus();
+        return false;
+    } else if (form.email.value.indexOf('@') < 0) {
+        alert('The email is wrong');
+        form.email.focus();
+        return false;
+    } else if (form.cou.value == '') {
+        alert('Please enter the correct Country format');
+        form.cou.focus();
+        return false;
+    } else if (form.com.value == '') {
+        alert('Please enter the correct Company format');
+        form.com.focus();
+        return false;
+    } else {
+        if (submitcount3 == 0) {
+            submitcount3++;
+            return true;
+        } else {
+            alert("Message is being sent, please wait!");
+            return false;
+        }
+    }
+}
 
 

@@ -1009,19 +1009,68 @@ header .navbar-default .navbar-nav .second-nav a {
 
 .download {
     position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 45%;
     right: 20px;
     z-index: 999;
+    cursor: pointer;
+
 }
 
 .download i {
     font-size: 45px;
     color: #68b92f;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
 }
 
 .download i:hover {
     color: #333;
+}
+
+footer .down-box .modal-title {
+    color: #333;
+    font-size: 16px;
+}
+
+footer .down-box .modal-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+}
+
+footer .down-box input {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    color: #333;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    outline-color: #68b92f;
+}
+
+footer .down-box .input-box>div {
+    margin-bottom: 10px;
+}
+
+footer .down-box .down-submit {
+    text-align: center;
+    margin-bottom: 0 !important;
+}
+
+footer .down-box .down-submit input {
+    width: 50%;
+    font-weight: 18px;
+}
+
+footer .down-box form input::-webkit-input-placeholder {
+    font-size: 12px;
 }
 
 /* map */
@@ -1079,22 +1128,22 @@ footer .left ul li:nth-child(3) {
 
 
 
-footer form .box {
+footer .right form .box {
     margin-bottom: 20px;
 }
 
-footer form .box .txt {
+footer .right form .box .txt {
     text-align: right;
     font-size: 16px;
     height: 34px;
     line-height: 34px;
 }
 
-footer form .box .txt span {
+footer .right form .box .txt span {
     color: red;
 }
 
-footer form input {
+footer .right form input {
     width: 100%;
     height: 34px;
     line-height: 34px;
@@ -1104,7 +1153,7 @@ footer form input {
     font-size: 16px;
 }
 
-footer form textarea {
+footer .right form textarea {
     width: 100%;
     height: 120px;
     padding: 10px;
@@ -1113,7 +1162,7 @@ footer form textarea {
 
 
 
-footer form .submit-btn {
+footer .right form .submit-btn {
     width: 144px;
     height: 44px;
     padding: 0;
@@ -1247,7 +1296,7 @@ header .wap-nav {
     header .de .navbar-nav {
         padding: 0 3%;
     }
-    
+
 }
 
 @media screen and (max-width:1680px) {
@@ -1307,8 +1356,8 @@ header .wap-nav {
     header .navbar-default .navbar-nav {
         padding: 0;
     }
-    
-    header .de .navbar-nav>li>a{
+
+    header .de .navbar-nav>li>a {
         padding: 35px 12px;
     }
 
@@ -1894,5 +1943,9 @@ header .wap-nav {
         font-size: 15px;
         color: #fff;
         padding: 3px 0px;
+    }
+
+    footer .down-box .modal-dialog {
+        width: 350px;
     }
 }
