@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit();?>
 <div class="thank">
     <div class="container">
         <div class="row">
